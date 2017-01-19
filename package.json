@@ -1,0 +1,25 @@
+{
+  "name": "mmm-nflweather",
+  "version": "1.0.0",
+  "description": "Magic Mirror NFL weather module",
+  "main": "MMM-NFLweather.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cowboysdude/MMM-NFLweather.git"
+  },
+  "keywords": [
+    "MM2"
+  ],
+  "author": "Cowboysdude",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cowboysdude/MMM-NFLweather/issues"
+  },
+  "homepage": "https://github.com/cowboysdude/MMM-NFLweather#readme",
+  "dependencies": {
+    "request": "^2.79.0"
+  }
+}
