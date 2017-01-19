@@ -1,7 +1,14 @@
 # MMM-NFLweather
 Weather info for NFL games on Magic Mirror 2
 
-All weather for all NFL games.... Regular and Post Season included.
+Either copy into MMM-NFLweather under your modules or git
+
+go into:
+
+MagicMirror/Modules/MMM-NFLweather and run:
+ npm install
+ 
+ All weather for all NFL games.... Regular and Post Season included.
 
 Go to:
 Create an account
