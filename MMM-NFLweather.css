@@ -1,0 +1,21 @@
+@-webkit-keyframes MMM-NFLweather-pulse {
+    0% {opacity: 1;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.MMM-NFLweather .span {
+    border-spacing: 10px 0px;
+    border-collapse: separate;
+    text-align: center;
+    font-size: 10px;
+}
+
+.MMM-NFLweather .div {
+    vertical-align: middle;
+    font-size: 10px;
+}
+4
+.MMM-NFLweather .tr {
+    align-items: center;
+}
