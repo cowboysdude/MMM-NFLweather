@@ -25,7 +25,7 @@ Input your key into your config.js file like this:
   			}
          },
          
-         REMEMBER NO / or \ UNLESS IT IS PART OF YOUR KEY!!
+         
          
          That's it, you should up and running!!! 
          
