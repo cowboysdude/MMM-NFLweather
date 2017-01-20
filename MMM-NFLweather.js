@@ -52,6 +52,7 @@ Module.register("MMM-NFLweather", {
        getDom: function() {
            var d = new Date();
            var fullYear = d.getFullYear();
+           var now =  new Date().toISOString().slice(0,10);
 
            var wrapper = document.createElement("div");
            wrapper.className = "dimmed light small";
@@ -86,9 +87,9 @@ Module.register("MMM-NFLweather", {
                awayLogo.appendChild(awayIcon);
                large.appendChild(awayLogo);
 
-               var spacer = document.createElement("span");
-               spacer.innerHTML = " AT ";
-               large.appendChild(spacer);
+               var at = document.createElement("span");
+               at.innerHTML = " AT ";
+               large.appendChild(at);
 
                var homeLogo = document.createElement("span");
                var homeIcon = document.createElement("img");
@@ -98,27 +99,36 @@ Module.register("MMM-NFLweather", {
 
 
                var gameTemp = document.createElement("div");
+               gameTemp.classList.add("gametemp");
                gameTemp.innerHTML = "Game Time Temp: " + game.high;
                large.appendChild(gameTemp);
                
                if (dome === "1"){
 			   var stad = document.createElement("div");
-			   stad.innerHTML = "<font color=#FFBB33>Dome Stadium: </font>" + game.stadium;
+			   stad.classList.add("stadium");
+			   stad.innerHTML = "Dome: " + game.stadium;
 			   large.appendChild(stad);
 			   } else {
                var windChill = document.createElement("div");
+               windChill.classList.add("stadium");
                windChill.innerHTML = "Wind Chill: " + game.windChill;
                large.appendChild(windChill);
 			   } 
                var gameForecast = document.createElement("div");
-               gameForecast.innerHTML = "<font color=#fff>Forecast: </font>" + game.forecast;
+               gameForecast.classList.add("forecast");
+               gameForecast.innerHTML = "Forecast: " + game.forecast;
                large.appendChild(gameForecast);
                
-               if (game.winner === ""){
-			   var blankWinner = document.createElement("div");
-               blankWinner.innerHTML = "";
-               large.appendChild(blankWinner);
-               } else {
+               if (game.winner === "" && eDate === now){
+			   var progressWinner = document.createElement("div");
+			   progressWinner.classList.add("blink");
+               progressWinner.innerHTML = "In Progress";
+               large.appendChild(progressWinner);
+               } else if (game.winner === "") {
+			   var noWinner = document.createElement("div");
+               noWinner.innerHTML = "";
+               large.appendChild(noWinner);
+			   } else {
 			   var winLogo = document.createElement("div");
 			   var winIcon = document.createElement("img");
                winIcon.src = this.file("icons/" + game.winner + ".png");
