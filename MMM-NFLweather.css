@@ -15,7 +15,15 @@
     vertical-align: middle;
     font-size: 10px;
 }
-4
-.MMM-NFLweather .tr {
-    align-items: center;
+.MMM-NFLweather .blink {
+    -webkit-animation: MMM-NFLweather-pulse 2s infinite;
+}
+.MMM-NFLweather .forecast {
+    color: #fff;
+}
+.MMM-NFLweather .stadium {
+    color: #FFBB33;
+}
+.MMM-NFLweather .gametemp {
+    color: #10B1C8;
 }
