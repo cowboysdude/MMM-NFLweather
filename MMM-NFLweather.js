@@ -114,10 +114,17 @@ Module.register("MMM-NFLweather", {
                windChill.innerHTML = "Wind Chill: " + game.windChill;
                large.appendChild(windChill);
 			   } 
+                if (game.forecast === null){
+			   var gameForecast = document.createElement("div");
+               gameForecast.classList.add("forecast");
+               gameForecast.innerHTML = "Forecast: N/A";
+               large.appendChild(gameForecast);
+			   } else {
                var gameForecast = document.createElement("div");
                gameForecast.classList.add("forecast");
                gameForecast.innerHTML = "Forecast: " + game.forecast;
                large.appendChild(gameForecast);
+			   }
                
                if (game.winner === "" && eDate === now){
 			   var progressWinner = document.createElement("div");
