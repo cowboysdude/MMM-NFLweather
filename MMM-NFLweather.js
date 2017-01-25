@@ -100,9 +100,13 @@ Module.register("MMM-NFLweather", {
 
                var gameTemp = document.createElement("div");
                gameTemp.classList.add("gametemp");
+               if (game.high === null){
+			   gameTemp.innerHTML = "Game Time Temp: Not Available";
+			   large.appendChild(gameTemp);
+			   } else {
                gameTemp.innerHTML = "Game Time Temp: " + game.high;
                large.appendChild(gameTemp);
-               
+               }
                if (dome === "1"){
 			   var stad = document.createElement("div");
 			   stad.classList.add("stadium");
