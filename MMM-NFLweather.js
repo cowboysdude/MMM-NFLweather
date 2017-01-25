@@ -88,7 +88,7 @@ Module.register("MMM-NFLweather", {
                large.appendChild(awayLogo);
 
                var at = document.createElement("span");
-               at.innerHTML = " AT ";
+               at.innerHTML = "~ AT ~";
                large.appendChild(at);
 
                var homeLogo = document.createElement("span");
