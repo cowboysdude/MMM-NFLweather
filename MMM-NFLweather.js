@@ -81,6 +81,10 @@ Module.register("MMM-NFLweather", {
                gameEl.innerHTML = eDate + " @ " + game.gameTimeET + " EST - " + game.tvStation;
                large.appendChild(gameEl);
 
+               var ht = document.createElement("span");
+               ht.innerHTML = "Home: ";
+               large.appendChild(ht);
+
                var awayLogo = document.createElement("span");
                var awayIcon = document.createElement("img");
                awayIcon.src = this.file("icons/" + game.awayTeam + ".png");
@@ -96,7 +100,10 @@ Module.register("MMM-NFLweather", {
                homeIcon.src = this.file("icons/" + game.homeTeam + ".png");
                homeLogo.appendChild(homeIcon);
                large.appendChild(homeLogo);
-
+               
+               var aw = document.createElement("span");
+               aw.innerHTML = " :Away";
+               large.appendChild(aw);
 
                var gameTemp = document.createElement("div");
                gameTemp.classList.add("gametemp");
